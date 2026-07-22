@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { DEFAULT_THEME } from "../../lib/theme";
 
-const ZALO_GROUP_LINK = "https://zalo.me/g/msd7vvhjcwiffr3tyqor";
+const ZALO_GROUP_LINK = "https://zalo.me/g/aemkiy4ciyoiuwojpocf";
 const MYID_COMMAND = "#My_ID";
 
 // Tên gợi nhớ chỉ lưu riêng trên từng điện thoại (localStorage), tách theo
@@ -194,8 +194,8 @@ export default function LoginPage() {
       <div className="w-full max-w-md relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-3">
-            <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center shrink-0 shadow-md shadow-[var(--highlight)]/20">
-              <CuteCatIcon className="w-6 h-6 text-white" />
+            <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 shadow-md shadow-[var(--highlight)]/20">
+              <img src="/brand/avatar-vytohoantien.png" alt="Vy Tô Hoàn Tiền" className="w-full h-full object-cover" />
             </div>
             <span className="font-display font-semibold text-lg tracking-tight">
               Mua sắm hoàn tiền cùng Vy Tô
@@ -360,12 +360,12 @@ export default function LoginPage() {
                 <p className="text-[11px] text-muted">
                   Liên hệ hỗ trợ:{" "}
                   <a
-                    href="https://zalo.me/0902431867"
+                    href="https://zalo.me/0345647571"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#3f95b0] font-bold hover:underline"
                   >
-                    Zalo (0902431867)
+                    Zalo (0345647571)
                   </a>
                 </p>
               </div>

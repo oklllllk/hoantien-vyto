@@ -9,9 +9,13 @@ export default function AddToHomeScreenModal() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const hiddenForever = window.localStorage.getItem(HIDE_FOREVER_KEY);
-    if (hiddenForever !== "true") {
-      setShow(true);
+    // Tạm thời tắt hiển thị popup này (video hướng dẫn sẽ được bổ sung sau).
+    // eslint-disable-next-line no-constant-condition
+    if (false) {
+      const hiddenForever = window.localStorage.getItem(HIDE_FOREVER_KEY);
+      if (hiddenForever !== "true") {
+        setShow(true);
+      }
     }
   }, []);
 

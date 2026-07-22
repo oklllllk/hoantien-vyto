@@ -6,7 +6,7 @@ import { DEFAULT_THEME, getStoredTheme } from "../../lib/theme";
 import HuongDanTaoLinkModal from "../components/HuongDanTaoLinkModal";
 
 // Link nhóm Zalo nơi khách nhận My ID — dùng để khách gửi lệnh rút tiền vào nhóm.
-const ZALO_GROUP_LINK = "https://zalo.me/g/msd7vvhjcwiffr3tyqor";
+const ZALO_GROUP_LINK = "https://zalo.me/g/aemkiy4ciyoiuwojpocf";
 
 const PAGE_SIZE = 10;
 const PAGE_WINDOW = 5;
@@ -1542,7 +1542,7 @@ export default function DashboardClient({
                 </button>
                 <button
                   type="button"
-                  onClick={() => setHuongDanOpen(true)}
+                  onClick={() => {}}
                   className="shrink-0 text-[11px] sm:text-xs font-bold text-danger underline underline-offset-2 cursor-pointer hover:brightness-90"
                 >
                   Video hướng dẫn
@@ -2441,10 +2441,10 @@ export default function DashboardClient({
                 <div className="ticket-dashed" />
                 <div className="px-6 sm:px-7 pt-4">
                   <p
-                    className="inline-flex items-center justify-center w-full bg-[#fff4b8] border border-[#f5c944] text-[#8a6412] font-bold rounded-full px-3 py-1.5 text-center whitespace-nowrap overflow-hidden"
+                    className="inline-flex items-center justify-center w-full bg-[#dbeeff] border border-[#9cc9f5] text-[#1f5c7c] font-bold rounded-full px-3 py-1.5 text-center whitespace-nowrap overflow-hidden"
                     style={{ fontSize: "clamp(8px, 2.6vw, 12px)" }}
                   >
-                    💡Hoa hồng ở &gt;Đã hoàn thành&lt; sẽ chuyển qua &gt;Có sẵn để rút&lt; sau 1 ngày
+                    💡Hoa hồng ở &gt;Đã hoàn thành&lt; sẽ chuyển qua &gt;Có sẵn để rút&lt; sau 3 ngày
                   </p>
                 </div>
                 <div className="p-6 sm:p-7 pt-4 grid grid-cols-2 gap-4">
@@ -2734,12 +2734,12 @@ export default function DashboardClient({
             <p className="text-[11px] text-muted">
               Liên hệ hỗ trợ:{" "}
             <a
-              href="https://zalo.me/0902431867"
+              href="https://zalo.me/0345647571"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#3f95b0] font-bold hover:underline"
             >
-              Zalo (0902431867)
+              Zalo (0345647571)
             </a>
             </p>
           )}

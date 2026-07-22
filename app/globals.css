@@ -34,18 +34,18 @@
 }
 
 html {
-  background: #f6f0ff;
+  background: #fffbe8;
   overscroll-behavior-y: none;
 }
 
 body {
-  background: #f6f0ff;
+  background: #fffbe8;
   color: var(--cream);
   overscroll-behavior-y: none;
   background-image:
-    radial-gradient(ellipse 900px 520px at 100% -8%, rgba(216, 180, 254, 0.55), transparent 60%),
-    radial-gradient(ellipse 700px 460px at -5% 105%, rgba(196, 148, 245, 0.4), transparent 55%),
-    linear-gradient(160deg, #faf6ff 0%, #e6d5fd 45%, #c9a3f5 100%);
+    radial-gradient(ellipse 900px 520px at 100% -8%, rgba(255, 224, 130, 0.55), transparent 60%),
+    radial-gradient(ellipse 700px 460px at -5% 105%, rgba(255, 209, 102, 0.4), transparent 55%),
+    linear-gradient(160deg, #fffdf3 0%, #fff3c4 45%, #ffe28a 100%);
   background-attachment: fixed;
 }
 
@@ -111,42 +111,42 @@ body {
    không còn bộ chọn 7 màu.
    ───────────────────────────────────────────────────────────── */
 .login-pink {
-  --ink: #2e1c47;
-  --surface: #faf7ff;
-  --panel: #fffdff;
-  --panel-2: #ece0fb;
-  --border: #d3b8ee;
-  --gold: #8b5fbf;
-  --gold-soft: #a97fd1;
+  --ink: #4a3c14;
+  --surface: #fffdf5;
+  --panel: #fffefa;
+  --panel-2: #fff2b8;
+  --border: #f0dd94;
+  --gold: #c99a2e;
+  --gold-soft: #e0b84a;
   --mint: #c9a6f2;
-  --cream: #2e1c47;
-  --muted: #8b7a9e;
+  --cream: #4a3c14;
+  --muted: #9c8c5a;
   --danger: #d94f70;
-  --highlight: #6634a8;
+  --highlight: #b4790f;
 
-  /* Bảng nền tím nhạt sáng tươi — dùng chung cho cả trang đăng nhập lẫn
-     dashboard, tươi sáng và dịu mắt. */
-  --bg-grad-1: #faf6ff;
-  --bg-grad-2: #e6d5fd;
-  --bg-grad-3: #c9a3f5;
+  /* Bảng nền vàng nhạt pastel sáng tươi — dùng chung cho cả trang đăng
+     nhập lẫn dashboard, tươi sáng và dịu mắt. */
+  --bg-grad-1: #fffdf3;
+  --bg-grad-2: #fff3c4;
+  --bg-grad-3: #ffe28a;
 
   background-image:
-    radial-gradient(ellipse 900px 520px at 100% -8%, rgba(216, 180, 254, 0.55), transparent 60%),
-    radial-gradient(ellipse 700px 460px at -5% 105%, rgba(196, 148, 245, 0.4), transparent 55%),
+    radial-gradient(ellipse 900px 520px at 100% -8%, rgba(255, 224, 130, 0.55), transparent 60%),
+    radial-gradient(ellipse 700px 460px at -5% 105%, rgba(255, 209, 102, 0.4), transparent 55%),
     linear-gradient(160deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 45%, var(--bg-grad-3) 100%);
   background-attachment: fixed;
   color: var(--cream);
 }
 
 .login-pink .field-important {
-  box-shadow: 0 0 0 3px rgba(111, 63, 174, 0.10);
+  box-shadow: 0 0 0 3px rgba(180, 121, 15, 0.10);
 }
 .login-pink .field-important:focus {
-  box-shadow: 0 0 0 3px rgba(111, 63, 174, 0.18);
+  box-shadow: 0 0 0 3px rgba(180, 121, 15, 0.18);
 }
 .login-pink .ticket-notch::before,
 .login-pink .ticket-notch::after {
-  background: #f1e6ff;
+  background: #fff7d6;
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -154,26 +154,26 @@ body {
    riêng cho trang /admin, tách biệt bảng màu tím của khách hàng.
    ───────────────────────────────────────────────────────────── */
 .admin-green {
-  --ink: #164430;
+  --ink: #4a3c14;
   --surface: #ffffff;
   --panel: #ffffff;
-  --panel-2: #e9f7ef;
-  --border: #bfe6cf;
-  --gold: #2f9e63;
-  --gold-soft: #5cbf8a;
+  --panel-2: #fff2b8;
+  --border: #f0dd94;
+  --gold: #c99a2e;
+  --gold-soft: #e0b84a;
   --mint: #34c288;
-  --cream: #163a29;
-  --muted: #6f9382;
+  --cream: #4a3c14;
+  --muted: #9c8c5a;
   --danger: #d9534f;
-  --highlight: #1f7a4d;
+  --highlight: #b4790f;
 
   --bg-grad-1: #ffffff;
-  --bg-grad-2: #e9f9f0;
-  --bg-grad-3: #cdf0dc;
+  --bg-grad-2: #fff3c4;
+  --bg-grad-3: #ffe28a;
 
   background-image:
-    radial-gradient(ellipse 900px 520px at 100% -8%, rgba(180, 240, 205, 0.55), transparent 60%),
-    radial-gradient(ellipse 700px 460px at -5% 105%, rgba(150, 225, 185, 0.4), transparent 55%),
+    radial-gradient(ellipse 900px 520px at 100% -8%, rgba(255, 224, 130, 0.55), transparent 60%),
+    radial-gradient(ellipse 700px 460px at -5% 105%, rgba(255, 209, 102, 0.4), transparent 55%),
     linear-gradient(160deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 45%, var(--bg-grad-3) 100%);
   background-attachment: fixed;
   color: var(--cream);
@@ -182,7 +182,7 @@ body {
 
 .admin-green .ticket-notch::before,
 .admin-green .ticket-notch::after {
-  background: #eafbf1;
+  background: #fff7d6;
 }
 
 /* Nhãn logo/avatar thương hiệu — thay cho bộ chọn 7 màu cũ */
@@ -362,12 +362,12 @@ body {
    cùng và khung tên khách hàng — để chữ/nội dung cuộn bên dưới không bị
    chồng lên, đồng thời không bị "trôi" mất khỏi màn hình. */
 .sticky-blur-bg {
-  background: rgba(250, 246, 255, 0.85);
+  background: rgba(255, 253, 243, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-/* Bản nền mờ tông xanh lá — dùng cho thanh tìm kiếm/lọc/sắp xếp "dính"
-   (sticky) trên trang Admin (nền trắng-xanh lá thay vì tím). */
+/* Bản nền mờ tông vàng nhạt — dùng cho thanh tìm kiếm/lọc/sắp xếp "dính"
+   (sticky) trên trang Admin. */
 .sticky-blur-bg-green {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
