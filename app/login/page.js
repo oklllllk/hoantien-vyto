@@ -236,7 +236,7 @@ export default function LoginPage() {
             <div className="rainbow-frame mb-5 inline-block w-full">
               <div className="rainbow-frame-inner">
                 <p className="text-center font-display font-bold text-lg py-2 text-highlight">
-                  Hello {nickname.trim() ? nickname.trim() : "Anh / Chị"} <span>🌷</span>
+                  <span>🌷</span> HOÀN TIỀN SHOPEE - VY TÔ
                 </p>
               </div>
             </div>
