@@ -191,7 +191,7 @@ body {
   height: 44px;
   border-radius: 999px;
   overflow: hidden;
-  box-shadow: 0 0 0 2px #fff, 0 2px 8px rgba(111, 63, 174, 0.25);
+  box-shadow: 0 0 0 2px #fff, 0 2px 8px rgba(201, 154, 46, 0.25);
   flex-shrink: 0;
 }
 .brand-badge img {
@@ -215,7 +215,7 @@ body {
   );
   background-size: 300% 100%;
   animation: rainbow-chase 5s linear infinite;
-  box-shadow: 0 4px 18px rgba(111, 63, 174, 0.25);
+  box-shadow: 0 4px 18px rgba(201, 154, 46, 0.25);
 }
 .rainbow-frame-inner {
   border-radius: 15px;
@@ -315,12 +315,12 @@ body {
   height: 34px;
   border-radius: 999px;
   background: var(--panel);
-  color: #8b5fbf;
+  color: #c99a2e;
   border: 1.5px solid var(--border);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(111, 63, 174, 0.15);
+  box-shadow: 0 2px 8px rgba(201, 154, 46, 0.15);
   transition: all 0.15s ease;
 }
 .vip-edit-btn-outside:hover {

@@ -22,7 +22,7 @@ function classifyStatus(trangThai) {
 
 // Bảng màu dùng chung cho bộ lọc đơn hàng + huy hiệu trạng thái từng đơn.
 const STATUS_COLORS = {
-  purple: { solid: "#8b5fbf", soft: "rgba(139,95,191,0.14)" },
+  purple: { solid: "#c99a2e", soft: "rgba(201,154,46,0.14)" },
   green: { solid: "#22c55e", soft: "rgba(34,197,94,0.14)" },
   yellow: { solid: "#eab308", soft: "rgba(234,179,8,0.16)" },
   red: { solid: "#ef4444", soft: "rgba(239,68,68,0.14)" },
@@ -38,7 +38,7 @@ function statusMeta(trangThai) {
 // Bộ lọc trạng thái đơn hàng hiển thị phía trên danh sách (Tất cả / Hoàn
 // thành / Chờ xử lý / Đã hủy), mỗi nút giữ đúng tông màu của trạng thái đó.
 const STATUS_FILTERS = [
-  { key: "all", label: "Tất cả", solid: "#8b5fbf", soft: STATUS_COLORS.purple.soft },
+  { key: "all", label: "Tất cả", solid: "#c99a2e", soft: STATUS_COLORS.purple.soft },
   { key: "completed", label: "Hoàn thành", solid: "#22c55e", soft: STATUS_COLORS.green.soft },
   { key: "pending", label: "Chờ xử lý", solid: "#eab308", soft: STATUS_COLORS.yellow.soft },
   { key: "cancelled", label: "Đã hủy", solid: "#ef4444", soft: STATUS_COLORS.red.soft },
@@ -57,9 +57,9 @@ function commissionBreakdown(grossCommission) {
 // Hoa hồng: đỏ san hô, Sau thuế: tím, Hoa hồng thực nhận: xanh lá sáng (theo ảnh mẫu).
 // Khung (border) của cả 3 ô dùng chung 1 màu tím nhạt theo tông nền của app.
 const AMOUNT_COLORS = {
-  gross: { solid: "#e0524f", border: "rgba(139,95,191,0.30)", soft: "rgba(139,95,191,0.05)" },
-  afterTax: { solid: "#a855f7", border: "rgba(139,95,191,0.30)", soft: "rgba(139,95,191,0.05)" },
-  final80: { solid: "#0ecb81", border: "rgba(139,95,191,0.30)", soft: "rgba(139,95,191,0.05)" },
+  gross: { solid: "#e0524f", border: "rgba(201,154,46,0.30)", soft: "rgba(201,154,46,0.05)" },
+  afterTax: { solid: "#d9a72c", border: "rgba(201,154,46,0.30)", soft: "rgba(201,154,46,0.05)" },
+  final80: { solid: "#0ecb81", border: "rgba(201,154,46,0.30)", soft: "rgba(201,154,46,0.05)" },
 };
 
 // Màu xanh lá cây sáng dùng chung cho số tiền "Hoa hồng ước tính" ở mọi nơi.
@@ -554,7 +554,7 @@ const RANK_TIERS = [
   { rank: 4, name: "Bạc", emoji: "🥈", color: "#9ca3af", glow: "rgba(156,163,175,0.35)" },
   { rank: 5, name: "Đồng", emoji: "🥉", color: "#c2703d", glow: "rgba(194,112,61,0.35)" },
 ];
-const DEFAULT_TIER = { name: "Thân Thiết", emoji: "💗", color: "#8b5fbf", glow: "rgba(139,95,191,0.25)" };
+const DEFAULT_TIER = { name: "Thân Thiết", emoji: "💗", color: "#c98a3f", glow: "rgba(201,138,63,0.25)" };
 
 function rankTier(rank) {
   return RANK_TIERS.find((t) => t.rank === rank) || DEFAULT_TIER;
@@ -1613,7 +1613,7 @@ export default function DashboardClient({
                   <button
                     type="submit"
                     disabled={converting}
-                    className={`flex-1 sm:flex-none sm:w-auto bg-[#8b5fbf] hover:bg-[#9d72d1] text-white font-bold rounded-lg px-5 py-2.5 text-sm shadow-md shadow-[#8b5fbf]/40 transition-all disabled:opacity-60 disabled:animate-none cursor-pointer ${
+                    className={`flex-1 sm:flex-none sm:w-auto bg-[#c99a2e] hover:bg-[#dcb54c] text-white font-bold rounded-lg px-5 py-2.5 text-sm shadow-md shadow-[#c99a2e]/40 transition-all disabled:opacity-60 disabled:animate-none cursor-pointer ${
                       batchResults.length === 0 ? "animate-pulse" : "opacity-30"
                     }`}
                   >
@@ -1798,14 +1798,14 @@ export default function DashboardClient({
                   : "w-full flex justify-center cursor-pointer"
               }
             >
-              <span className={`flex items-center justify-center gap-1.5 ${historyOpen ? "mb-3" : "bg-panel border border-[#8b5fbf]/40 rounded-full px-4 py-2 shadow-sm shadow-black/5"}`}>
+              <span className={`flex items-center justify-center gap-1.5 ${historyOpen ? "mb-3" : "bg-panel border border-[#c99a2e]/40 rounded-full px-4 py-2 shadow-sm shadow-black/5"}`}>
                 <span
                   className="font-display font-bold text-lg text-center"
-                  style={{ color: "#8b5fbf" }}
+                  style={{ color: "#c99a2e" }}
                 >
                   Lịch sử tạo link
                 </span>
-                <span style={{ color: "#8b5fbf" }}>
+                <span style={{ color: "#c99a2e" }}>
                   <ChevronDownIcon
                     className={`w-4 h-4 shrink-0 transition-transform ${historyOpen ? "rotate-180" : ""}`}
                   />

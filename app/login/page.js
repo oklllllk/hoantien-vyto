@@ -194,8 +194,8 @@ export default function LoginPage() {
       <div className="w-full max-w-md relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-3">
-            <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 shadow-md shadow-[var(--highlight)]/20">
-              <img src="/brand/avatar-vytohoantien.png" alt="Vy Tô Hoàn Tiền" className="w-full h-full object-cover" />
+            <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center shrink-0 shadow-md shadow-[var(--highlight)]/20">
+              <CuteCatIcon className="w-6 h-6 text-white" />
             </div>
             <span className="font-display font-semibold text-lg tracking-tight">
               Mua sắm hoàn tiền cùng Vy Tô
@@ -205,8 +205,8 @@ export default function LoginPage() {
 
           {/* Badge trang trí pastel cho sinh động */}
           <div className="flex items-center justify-center flex-wrap gap-2">
-            <span className="text-[11px] font-bold px-2.5 py-1 rounded-full text-[#5a3d85] bg-[#c9a6f2]/35 border border-[#c9a6f2]/50">
-              💜 Hoàn tiền cao
+            <span className="text-[11px] font-bold px-2.5 py-1 rounded-full text-[#8a6412] bg-[#ffe9a8]/60 border border-[#ffe9a8]/80">
+              💛 Hoàn tiền cao
             </span>
             <span className="text-[11px] font-bold px-2.5 py-1 rounded-full text-[#1f5c7c] bg-[#9fd0f0]/35 border border-[#9fd0f0]/50">
               💙 Thanh toán nhanh
@@ -228,7 +228,7 @@ export default function LoginPage() {
                 <VietnamFlagIcon className="w-full h-full" />
               </div>
               <div className="brand-badge" title="Hoàn tiền cùng Vy Tô">
-                <img src="/brand/logo-shield.png" alt="Hoàn tiền mua hàng" />
+                <img src="/brand/avatar-vytohoantien.png" alt="Hoàn tiền mua hàng" />
               </div>
             </div>
 
@@ -264,7 +264,7 @@ export default function LoginPage() {
                   Cách lấy My ID:
                 </p>
                 <p className="flex flex-wrap items-center gap-1.5">
-                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#8b5fbf] text-white text-[9px] font-bold shrink-0">1</span>
+                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#c99a2e] text-white text-[9px] font-bold shrink-0">1</span>
                   <span className="font-bold text-ink">Sao chép câu lệnh</span>
                   <span className="inline-flex items-center gap-1 font-mono-num font-bold bg-danger/15 text-danger px-1.5 py-0.5 rounded-md">
                     {MYID_COMMAND}
@@ -280,7 +280,7 @@ export default function LoginPage() {
                   {copied && <span className="text-highlight font-bold">Đã sao chép!</span>}
                 </p>
                 <p className="flex flex-wrap items-center gap-1.5">
-                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#a97fd1] text-white text-[9px] font-bold shrink-0">2</span>
+                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#dcb54c] text-white text-[9px] font-bold shrink-0">2</span>
                   <span className="font-bold text-ink">Gửi vào nhóm để lấy My ID</span>
                   <a
                     href={ZALO_GROUP_LINK}
@@ -293,7 +293,7 @@ export default function LoginPage() {
                   </a>
                 </p>
                 <p className="flex flex-wrap items-center gap-1.5">
-                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#6f3fae] text-white text-[9px] font-bold shrink-0">3</span>
+                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#a67818] text-white text-[9px] font-bold shrink-0">3</span>
                   <span className="font-bold text-ink">Sao chép ID bot gửi cho bạn và điền vào ô My ID.</span>
                 </p>
               </div>
