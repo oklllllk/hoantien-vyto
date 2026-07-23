@@ -233,10 +233,10 @@ export default function LoginPage() {
             </div>
 
             {/* Lời chào — đổi ngay theo Tên gợi nhớ khách nhập */}
-            <div className="greeting-frame mb-5 inline-block w-full">
-              <div className="greeting-frame-inner">
-                <p className="text-center font-display font-bold text-lg py-2.5 text-[#7c3aed]">
-                  Hello Anh / Chị <span>🌷</span>
+            <div className="rainbow-frame mb-5 inline-block w-full">
+              <div className="rainbow-frame-inner">
+                <p className="text-center font-display font-bold text-lg py-2 text-highlight">
+                  <span>🌷</span> HOÀN TIỀN SHOPEE - VY TÔ
                 </p>
               </div>
             </div>

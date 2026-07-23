@@ -228,22 +228,6 @@ body {
   100% { background-position: 300% 50%; }
 }
 
-/* Khung viền gradient xanh ngọc → tím, dạng pill — dùng riêng cho lời
-   chào "Hello Anh / Chị 🌷" ở đầu trang đăng nhập. */
-.greeting-frame {
-  position: relative;
-  padding: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #22d3ee, #8b5cf6);
-  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.18);
-}
-.greeting-frame-inner {
-  border-radius: 999px;
-  background: var(--panel);
-  height: 100%;
-  width: 100%;
-}
-
 /* Khung nhẹ, dịu mắt — dùng cho những dòng chữ chào cần đóng khung nhẹ */
 .soft-frame {
   border: 1px solid var(--border);
