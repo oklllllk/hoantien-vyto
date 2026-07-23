@@ -493,6 +493,13 @@ function formatVnd(amount) {
   return new Intl.NumberFormat("vi-VN", { maximumFractionDigits: 0 }).format(amount || 0) + "đ";
 }
 
+// Làm tròn XUỐNG (bỏ hẳn phần lẻ đồng, không tính tròn lên) — dùng riêng cho
+// "Có sẵn để rút": vd 12.222,22đ hay 12.222,99đ đều hiển thị là 12.222đ,
+// để không bao giờ hiện số cao hơn số tiền thực sự rút được.
+function floorVnd(amount) {
+  return Math.floor(Number(amount) || 0);
+}
+
 // Khách nhập kiểu Việt Nam (dấu chấm ngăn cách hàng nghìn, vd "50.000") —
 // bóc hết ký tự không phải số để ra đúng giá trị tuyệt đối (50000).
 function parseVndInput(str) {
@@ -1316,7 +1323,7 @@ export default function DashboardClient({
     setWithdrawCode("");
     setWithdrawCopied(false);
     const amount = parseVndInput(withdrawAmount);
-    const available = wallet ? wallet.coTheRutHien : 0;
+    const available = wallet ? floorVnd(wallet.coTheRutHien) : 0;
     if (!amount || amount <= 0) {
       setWithdrawError("Vui lòng nhập số tiền muốn rút.");
       return;
@@ -2365,7 +2372,7 @@ export default function DashboardClient({
               <p className="text-xs text-muted uppercase tracking-widest mb-2">Có sẵn để rút</p>
               <div className="inline-block border border-[#8fe0b0] bg-[#e9fbf1] rounded-xl px-4 py-2.5">
                 <p className="font-display font-bold text-4xl text-[#16c261] tabular-nums">
-                  {wallet ? formatVnd(wallet.coTheRutHien) : "—"}
+                  {wallet ? formatVnd(floorVnd(wallet.coTheRutHien)) : "—"}
                 </p>
               </div>
 

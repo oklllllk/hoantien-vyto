@@ -198,7 +198,7 @@ export default function LoginPage() {
               <CuteCatIcon className="w-6 h-6 text-white" />
             </div>
             <span className="font-display font-semibold text-lg tracking-tight">
-              Mua sắm hoàn tiền cùng Vy Tô
+              🌷 HOÀN TIỀN SHOPEE - VY TÔ
             </span>
           </div>
           <p className="text-muted text-sm mb-3">Shop càng nhiều hoàn càng đã 🐾</p>
