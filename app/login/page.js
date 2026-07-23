@@ -236,7 +236,7 @@ export default function LoginPage() {
             <div className="greeting-frame mb-5 inline-block w-full">
               <div className="greeting-frame-inner">
                 <p className="text-center font-display font-bold text-lg py-2.5 text-[#7c3aed]">
-                  Hello Anh / Chị <span>🌷</span>
+                  Hello {nickname.trim() ? nickname.trim() : "Anh / Chị"} <span>🌷</span>
                 </p>
               </div>
             </div>
