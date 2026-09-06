@@ -2,7 +2,17 @@ import { NextResponse } from "next/server";
 import { getCurrentUser } from "@/lib/getCurrentUser";
 import { convertShopeeLink } from "@/lib/shopee";
 
+// Đặt thành true để bật lại tính năng tạo link hoàn tiền.
+const FEATURE_CREATE_LINK_ENABLED = false;
+
 export async function POST(request) {
+  if (!FEATURE_CREATE_LINK_ENABLED) {
+    return NextResponse.json(
+      { error: "Tính năng tạo link hoàn tiền đang tạm ngưng." },
+      { status: 503 }
+    );
+  }
+
   const currentUser = await getCurrentUser();
   if (!currentUser) {
     return NextResponse.json({ error: "Chưa đăng nhập." }, { status: 401 });
