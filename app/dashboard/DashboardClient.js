@@ -767,6 +767,8 @@ const MUSIC_TRACKS = [
 
 // Tối đa 10 link được tạo trong 1 lần dùng chế độ "Tạo nhiều link".
 const MAX_MULTI_LINKS = 10;
+// Đặt thành true để bật lại tính năng tạo link hoàn tiền trên giao diện.
+const FEATURE_CREATE_LINK_ENABLED = false;
 
 // Lịch sử link tạo ra được lưu ở máy khách (localStorage), tách riêng theo My ID,
 // vì hệ thống hiện chưa có bảng lưu link ở server — không ảnh hưởng các bảng dữ liệu khác.
@@ -1233,6 +1235,11 @@ export default function DashboardClient({
     setConvertError("");
     setBatchResults([]);
 
+    if (!FEATURE_CREATE_LINK_ENABLED) {
+      setConvertError("Tính năng tạo link hoàn tiền đang tạm ngưng.");
+      return;
+    }
+
     let urls = [];
     if (createMode === "single") {
       const single = shopeeUrl.trim();
@@ -1573,17 +1580,19 @@ export default function DashboardClient({
                     <input
                       type="url"
                       required
+                      disabled={!FEATURE_CREATE_LINK_ENABLED}
                       value={shopeeUrl}
                       onChange={(e) => setShopeeUrl(e.target.value)}
                       placeholder="Dán link sản phẩm vào đây!"
-                      className="w-full bg-surface border border-border rounded-lg pl-3.5 pr-14 py-3 text-base sm:text-sm outline-none focus:border-gold transition-colors placeholder:text-muted/60"
+                      className="w-full bg-surface border border-border rounded-lg pl-3.5 pr-14 py-3 text-base sm:text-sm outline-none focus:border-gold transition-colors placeholder:text-muted/60 disabled:opacity-60 disabled:cursor-not-allowed"
                     />
                     <button
                       type="button"
                       onClick={handlePasteUrl}
+                      disabled={!FEATURE_CREATE_LINK_ENABLED}
                       aria-label="Dán link từ clipboard"
                       title="Dán link"
-                      className="absolute right-2 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-8 h-8 rounded-md bg-panel-2 text-gold hover:brightness-95 active:scale-90 transition-all cursor-pointer"
+                      className="absolute right-2 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-8 h-8 rounded-md bg-panel-2 text-gold hover:brightness-95 active:scale-90 transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                     >
                       <PasteIcon className="w-4 h-4" />
                     </button>
@@ -1594,18 +1603,20 @@ export default function DashboardClient({
                       <textarea
                         required
                         rows={4}
+                        disabled={!FEATURE_CREATE_LINK_ENABLED}
                         value={multiUrlsText}
                         onChange={(e) => setMultiUrlsText(e.target.value)}
                         onPaste={handleMultiPaste}
                         placeholder={"Dán link sản phẩm vào đây!\n(Mỗi link 1 dòng, tối đa 10 link)"}
-                        className="w-full bg-surface border border-border rounded-lg pl-3.5 pr-14 py-3 text-base sm:text-sm outline-none focus:border-gold transition-colors placeholder:text-muted/60 placeholder:leading-relaxed resize-y"
+                        className="w-full bg-surface border border-border rounded-lg pl-3.5 pr-14 py-3 text-base sm:text-sm outline-none focus:border-gold transition-colors placeholder:text-muted/60 placeholder:leading-relaxed resize-y disabled:opacity-60 disabled:cursor-not-allowed"
                       />
                       <button
                         type="button"
                         onClick={handlePasteMultiUrl}
+                        disabled={!FEATURE_CREATE_LINK_ENABLED}
                         aria-label="Dán link từ clipboard"
                         title="Dán link"
-                        className="absolute right-2 top-2.5 inline-flex items-center justify-center w-8 h-8 rounded-md bg-panel-2 text-gold hover:brightness-95 active:scale-90 transition-all cursor-pointer"
+                        className="absolute right-2 top-2.5 inline-flex items-center justify-center w-8 h-8 rounded-md bg-panel-2 text-gold hover:brightness-95 active:scale-90 transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                       >
                         <PasteIcon className="w-4 h-4" />
                       </button>
@@ -1619,12 +1630,14 @@ export default function DashboardClient({
                 <div className="flex items-center gap-2">
                   <button
                     type="submit"
-                    disabled={converting}
-                    className={`flex-1 sm:flex-none sm:w-auto bg-[#c99a2e] hover:bg-[#dcb54c] text-white font-bold rounded-lg px-5 py-2.5 text-sm shadow-md shadow-[#c99a2e]/40 transition-all disabled:opacity-60 disabled:animate-none cursor-pointer ${
-                      batchResults.length === 0 ? "animate-pulse" : "opacity-30"
+                    disabled={converting || !FEATURE_CREATE_LINK_ENABLED}
+                    className={`flex-1 sm:flex-none sm:w-auto bg-[#c99a2e] hover:bg-[#dcb54c] text-white font-bold rounded-lg px-5 py-2.5 text-sm shadow-md shadow-[#c99a2e]/40 transition-all disabled:opacity-60 disabled:animate-none cursor-not-allowed ${
+                      FEATURE_CREATE_LINK_ENABLED && batchResults.length === 0 ? "animate-pulse" : "opacity-30"
                     }`}
                   >
-                    {converting
+                    {!FEATURE_CREATE_LINK_ENABLED
+                      ? "Tạm ngưng"
+                      : converting
                       ? "Đang tạo..."
                       : createMode === "multi" && multiUrlsCount > 1
                       ? `Tạo ${Math.min(multiUrlsCount, MAX_MULTI_LINKS)} link hoàn tiền`
